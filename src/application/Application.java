@@ -23,10 +23,9 @@ public class Application {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ExchangeRate exchangeRate = new ExchangeRate(frame.getExchangeDialog().getExchange().getMoney().getCurrency(),frame.getExchangeDialog().getExchange().getCurrency(), 1.2);
-                Exchanger exchanger = new Exchanger();
-                System.out.println(exchanger.exchange(frame.getExchangeDialog().getExchange().getMoney(), exchangeRate).getAmount());
+                //System.out.println(exchanger.exchange(frame.getExchangeDialog().getExchange().getMoney(), exchangeRate).getAmount());
                 
-                ExchangeOperation operation = new ExchangeOperation(frame.getExchangeDialog(), new MoneyDisplay(), display);
+                ExchangeOperation operation = new ExchangeOperation(frame.getExchangeDialog(), new MoneyDisplay(), exchangeRate);
                 operation.execute();
             }
         });
