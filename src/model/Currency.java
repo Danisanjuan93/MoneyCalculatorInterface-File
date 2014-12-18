@@ -25,7 +25,7 @@ public class Currency {
     }
     
     @Override
-    public String toString() {
+    public String toString(){
         return code;
     }
 
